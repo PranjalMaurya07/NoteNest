@@ -1,6 +1,6 @@
 import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import '../styles/login.css';
@@ -46,6 +46,14 @@ const Login = () => {
           />
           <button type="submit" className="login-button">Login</button>
         </form>
+
+        {/* Link to Register Page */}
+        <p className="signup-text">
+          New user?{" "}
+          <Link to="/register" className="signup-link">
+            Sign Up here
+          </Link>
+        </p>
       </div>
     </div>
   );
