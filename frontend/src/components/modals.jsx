@@ -80,7 +80,7 @@ const Modal = ({ note, onClose, onRename, onDelete, onToggleFavorite, onImageUpl
         onChange={handleImageUpload}
         className="modal__image-upload"
       />
-      {note.image && <img src={`http://localhost:8000/${note.image}`} alt="Note" className="modal__image-preview" />}
+      {note.image && <img src={`https://notenest-backend-5sz3.onrender.com/${note.image}`} alt="Note" className="modal__image-preview" />}
 
       <div className="modal__button-container">
         <button onClick={handleSave} className="modal__button modal__button--save">
