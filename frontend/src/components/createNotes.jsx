@@ -21,7 +21,7 @@ const CreateNotes = ({ fetchNotes, closeModal }) => {
 
     try {
       await axios.post(
-        "http://localhost:8000/api/add-notes",
+        "https://notenest-backend-5sz3.onrender.com/api/add-notes",
         { title, content },
         { headers: { Authorization: `Bearer ${token}` } }
       );
