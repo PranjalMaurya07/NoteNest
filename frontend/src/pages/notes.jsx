@@ -22,7 +22,7 @@ const Notes = () => {
     if (!token) return navigate("/");
 
     try {
-      const res = await axios.get("http://localhost:8000/api/get-notes", {
+      const res = await axios.get("https://notenest-backend-5sz3.onrender.com/api/get-notes", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setNotes(res.data.notes);
@@ -55,7 +55,7 @@ const Notes = () => {
       const token = localStorage.getItem("token");
       if (!token) return navigate("/");
 
-      await axios.delete(`http://localhost:8000/api/delete-notes/${noteId}`, {
+      await axios.delete(`https://notenest-backend-5sz3.onrender.com/api/delete-notes/${noteId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       toast.success("Note deleted successfully!");
@@ -72,7 +72,7 @@ const Notes = () => {
       if (!token) return navigate("/");
 
       await axios.put(
-        `http://localhost:8000/api/update-notes/${noteId}`,
+        `https://notenest-backend-5sz3.onrender.com/api/update-notes/${noteId}`,
         { title: newTitle, content: newContent },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -90,7 +90,7 @@ const Notes = () => {
       if (!token) return navigate("/");
 
       await axios.put(
-        `http://localhost:8000/api/notes/favorite/${noteId}`,
+        `https://notenest-backend-5sz3.onrender.com/api/notes/favorite/${noteId}`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -112,7 +112,7 @@ const Notes = () => {
 
     try {
       await axios.put(
-        `http://localhost:8000/api/notes/upload-image/${noteId}`,
+        `https://notenest-backend-5sz3.onrender.com/api/notes/upload-image/${noteId}`,
         formData,
         {
           headers: {
