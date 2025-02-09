@@ -1,0 +1,168 @@
+.notes-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  .logout-button {
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    align-self: flex-end;
+    font-size: 16px;
+  }
+  
+  .search-bar {
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  
+  .notes-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .note-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .note-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .favorite-button {
+    background: none;
+    border: none;
+    color: #f39c12;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .favorited {
+    color: gold;
+  }
+  
+  .create-note-button {
+    padding: 12px 24px;
+    background-color: #2ecc71; /* Green color to make it stand out */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50px; /* Rounded corners for a smooth look */
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 20px; /* Spacing from other elements */
+    text-align: center;
+  }
+  
+  .create-note-button:hover {
+    background-color: #27ae60; /* Darker green on hover */
+    transform: translateY(-3px); /* Slight upward movement on hover */
+  }
+  
+  .create-note-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px #2ecc71; /* Green glow effect on focus */
+  }
+  
+  .notes-container {
+    position: relative;
+  }
+  
+  .create-note-button {
+    position: absolute;
+    top: 100px; /* Adjust the top positioning */
+    left: 20px; /* Align it to the right */
+  }
+  
+  .close-modal-button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    align-self: flex-end;
+    transition: background-color 0.3s ease;
+  }
+  
+  .close-modal-button:hover {
+    background-color: #c0392b;
+  }
+  
+  .close-modal-button:focus {
+    outline: none;
+  }
+  
+  /* For responsiveness */
+  @media (max-width: 768px) {
+    .close-modal-button {
+      padding: 8px 15px;
+      font-size: 14px;
+    }
+  }
+  
+
+  .note-card-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .action-button {
+    padding: 5px 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .delete-button {
+    background-color: red;
+  }
+  
+  .view-button {
+    background-color: green;
+  }
+  
+  .action-button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Toast notifications customization */
+  .Toastify__toast {
+    font-size: 16px;
+  }
+  

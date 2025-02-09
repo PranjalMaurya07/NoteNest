@@ -1,0 +1,120 @@
+/* Container for the Create Note section */
+.create-note-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.create-note-container h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.note-title-input, .note-content-textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.note-title-input {
+  font-size: 18px;
+}
+
+.note-content-textarea {
+  height: 200px;
+  font-size: 16px;
+  resize: vertical;
+}
+
+.speech-controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.start-recording-btn, .stop-recording-btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.start-recording-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+}
+
+.stop-recording-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+}
+
+.note-actions {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.save-note-btn {
+  background-color: #2ecc71;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.save-note-btn:hover {
+  background-color: #27ae60;
+}
+
+.start-recording-btn:disabled,
+.stop-recording-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .create-note-container {
+    padding: 15px;
+  }
+
+  .note-title-input, .note-content-textarea {
+    font-size: 14px;
+  }
+
+  .speech-controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .start-recording-btn, .stop-recording-btn {
+    width: 100%;
+  }
+
+  .note-actions {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+  }
+
+  .save-note-btn {
+    width: 100%;
+  }
+}
